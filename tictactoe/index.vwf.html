@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="wrapper>" style="position:absolute">
+<div id=chatWindow" >
+    <div id="chatContent"></div>
+    <textarea id="chatInput" rows="1" style="width:100%"/>
+    <div id="playerNameInput">
+        <script>
+            $("#playerNameInput").append(Math.random());
+        </script>
+    </div>
+</div>
+</div>
+<script>
+    $('#wrapper').appendTo('#vwf-root');
+    var playerName =$("#playerNameInput").val();
+    $('#chatInput').keydown(function(e) {
+        e.stopPropagation();
+        var code = (e.keyCode ? e.keyCode : e.which);
+        if(code ==13) {
+            vwf_view.kernel.callMethod(sceneNode, "sendChat",
+            [playerName, $(this).val()]);
+        }
+    }).keyup(function(e){
+                e.stopPropagation();
+                var code = (e.keyCode ? e.keyCode : e.which);
+                if(code == 13) {
+                    $(this).val('');
+                }
+            });
+
+    vwf_view.calledMethod = function(nodeId, methodName,
+            methodParameters) {
+        if(nodeId == sceneNode){
+            switch(methodName) {
+                case "sendChat":
+                    $('#chatContent').append("<span><b>" +
+                            methodParamaters[0] + ": " +
+                            methodParameters[1] + "</b><br/></span>")
+                    break;
+            }
+        }
+    };
+</script>
+</body>
+</html>

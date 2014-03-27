@@ -1,0 +1,45 @@
+# Simplest possible VWF applcation.
+# See https://virtual.wf/getting_started.html for more information.
+--- 
+extends: http://vwf.example.com/scene.vwf
+properties:
+  usersShareView: false
+  userObject:
+    extends: http://vwf.example.com/node3.vwf
+    properties:
+      translationSpeed: 100
+    children:
+      camera:
+        extends: http://vwf.example.com/camera.vwf
+        properties:
+          translation:
+            translation: [0, 0, 800]
+            far: 1000000
+            near: 1
+      avatar:
+        extends: http://vwf.example.com/node3.vwf
+        source: duck.dae
+        type: model/vnd.collada+xml
+        properties:
+          rotation: [0, 0, 1, 90]
+          scale: 0.4
+    methods:
+
+children:
+  board:
+    extends: http://vwf.example.com/node3.vwf
+    source: board.dae
+  light:
+    extends: http://vwf.example.com/light.vwf
+    properties:
+      lightType: "point"
+methods:
+  initializeCamera:
+  createDuck:
+  sendChat:
+    parameters:
+      - player
+      - message
+
+scripts:
+  - |
