@@ -155,12 +155,12 @@ function newWindow( id, title, type, url, color, muted ) {
 			minHeight: 125,
       minWidth: 170
 		});
-		
+
 		$div.draggable({
       containment: "window",
 			cancel: "#container-"+divId
     });
-		
+
 		$div.mousedown(function() {
 			$('#panesRight').children().css( "z-index", 3 );
 			$('#panesLeft').children().css( "z-index", 3 );
@@ -169,9 +169,9 @@ function newWindow( id, title, type, url, color, muted ) {
 			$(this).css('z-index', 4);
 			disablePointerEvents();
 		});
-			
+
 		$div.mouseup(enablePointerEvents);
-		
+
    	$div.data("originalSize", {width: $div.width(), height: $div.height()});
 		break;
 	default:	
@@ -205,24 +205,24 @@ function newWindow( id, title, type, url, color, muted ) {
 		break;
  }
   $div.data("originalOffset", $div.offset());
- 
+
   var $appBar = $("#appBar");
   if ($appBar.children().length < 12)
   {
     var buttonName = newWin.buttonName = "button-" + divId;
-    var buttonHtml = "<div class='btn-group dropup' id='"+buttonName+"'><button class='btn btn-success' id='"+buttonName+"-button'>"+title+"</button>" + 
+    var buttonHtml = "<div class='btn-group dropup' id='"+buttonName+"'><button class='btn btn-success' id='"+buttonName+"-button'>"+title+"</button>" +
       "<button class='btn btn-success dropdown-toggle' data-toggle='dropdown'><span class='caret'></span></button>" +
       "<ul class='dropdown-menu pull-right'><li><a id='"+buttonName+"-reset' href='#'>Reset</a></li></ul></div>";
-    
+
     $appBar.append( buttonHtml );
-    
+
     $("#" + buttonName + "-button").click(function() {
       minMax( divId );
     });
     $("#" + buttonName + "-reset").click(function() {
       resetPosition( divId );
     });
-  } 
+  }
 
   //---------------------------------
   // Specialize window based on type
@@ -266,18 +266,13 @@ function newWindow( id, title, type, url, color, muted ) {
       );
       break;
 		case "video":
-			var videoId = newWin.videoId = "video-" + divId;
+            var videoId = newWin.videoId = "video-" + divId;
 			var mutedAttr = muted ? "muted " : "";
 
       $div.append(
-				"<i id='enlarge-" + divId + "' style='position:absolute;right:5px;top:5px;z-index: 4;'  alt='' onclick='swapPanes(this.id.substr(8));' class='icon-chevron-up icon-white'/>" +
-
-                 //   "<video id='" + videoId + "' width='320' height='240' loop='loop' autoplay "+mutedAttr+"style='position: absolute; left: 0; top: 0; z-index: 2;width:100%;height:100%;' />" +
-				"<audio id='" + videoId + "'/>" +
-                "<div id='"+ divId + "-overlay' style='position: absolute; left: 0; top: 0; z-index: 2;'>" +
-				"<span class='label label-inverse' style='margin-left:5px;margin-top:5px;'>" + title + "</span>"+
-				"</div>"
-			);  
+          //"<video id='" + videoId + "' width='320' height='240' loop='loop' autoplay "+mutedAttr+"style='position: absolute; left: 0; top: 0; z-index: 2;width:100%;height:100%;' />" +
+          "<audio id='audio-" + parms.ID + "' loop='loop' autoplay/>"//+mutedAttr+"/>"
+      );
 
       var videoE = $( '#'+ videoId )[0];
       if ( videoE ) {

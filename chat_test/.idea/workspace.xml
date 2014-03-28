@@ -26,30 +26,63 @@
       <file leaf-file-name="index.vwf.yaml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.vwf.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="14" selection-start="1904" selection-end="1907" vertical-scroll-proportion="-11.076923" vertical-offset="507" max-vertical-offset="1395">
+            <state line="15" column="11" selection-start="742" selection-end="742" vertical-scroll-proportion="-8.653846" vertical-offset="0" max-vertical-offset="5970">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="videoWindow.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/videoWindow.js">
+      <file leaf-file-name="index.vwf.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.vwf.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="336" column="12" selection-start="11827" selection-end="11830" vertical-scroll-proportion="1.53125" vertical-offset="3687" max-vertical-offset="6240">
+            <state line="633" column="29" selection-start="30807" selection-end="30807" vertical-scroll-proportion="0.76785713" vertical-offset="8850" max-vertical-offset="9765">
               <folding>
-                <marker date="1395930631000" expanded="true" signature="10366:10397" placeholder="..." />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#0;n#div#4;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1396031146000" expanded="true" signature="18524:18571" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="18600:18658" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="18674:18735" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="18795:18805" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="19008:19070" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="21725:21772" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="21801:21859" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="21875:21936" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="21995:22005" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="22186:22248" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="24406:24453" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="24482:24540" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="24556:24617" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="24676:24686" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="24964:25026" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="26225:26272" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="26301:26337" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="26353:26414" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="26473:26483" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="26761:26823" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="27456:27503" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="27649:27710" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="27791:27801" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="28954:29001" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="29030:29088" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="29104:29165" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="29224:29234" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="29264:29310" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="29555:29617" placeholder="..." />
+                <marker date="1396031146000" expanded="true" signature="29887:29933" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.vwf.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.vwf.html">
+      <file leaf-file-name="model.vwf.yaml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model.vwf.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="188" column="25" selection-start="7735" selection-end="7742" vertical-scroll-proportion="-5.6" vertical-offset="2540" max-vertical-offset="3825">
-              <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="13" column="36" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -57,8 +90,11 @@
       <file leaf-file-name="index.vwf.config.yaml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.vwf.config.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="49" selection-start="744" selection-end="744" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="315">
-              <folding />
+            <state line="10" column="99" selection-start="668" selection-end="668" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+              <folding>
+                <marker date="1396029339000" expanded="true" signature="689:717" placeholder="model:" />
+                <marker date="1396029339000" expanded="true" signature="717:1485" placeholder="view:" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,15 +110,21 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/../../vwf/public/webrtc/index.vwf.html" />
-        <option value="$PROJECT_DIR$/index.vwf.yaml" />
-        <option value="$PROJECT_DIR$/index.vwf.html" />
-        <option value="$PROJECT_DIR$/index.vwf.config.yaml" />
+        <option value="$PROJECT_DIR$/../../vwf/public/chat/index.vwf.yaml" />
         <option value="$PROJECT_DIR$/videoWindow.js" />
+        <option value="$PROJECT_DIR$/../tictactoe/index.vwf.yaml" />
+        <option value="$PROJECT_DIR$/chatuser.vwf.yaml" />
+        <option value="$PROJECT_DIR$/../tictactoe/index.vwf.html" />
+        <option value="$PROJECT_DIR$/../tictactoe/index.vwf.config.yaml" />
+        <option value="$PROJECT_DIR$/model.vwf.yaml" />
+        <option value="$PROJECT_DIR$/index.vwf.yaml" />
+        <option value="$PROJECT_DIR$/index.vwf.config.yaml" />
+        <option value="$PROJECT_DIR$/index.vwf.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="166" />
+    <option name="x" value="574" />
     <option name="y" value="22" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
@@ -113,7 +155,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -166,6 +207,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -245,7 +287,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="166" y="22" width="1400" height="1000" extended-state="1" />
+    <frame x="574" y="22" width="1400" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -260,11 +302,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32975295" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -286,6 +328,135 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.vwf.yaml">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="40" selection-start="839" selection-end="839" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5940">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.vwf.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="204" column="42" selection-start="8684" selection-end="8684" vertical-scroll-proportion="0.0" vertical-offset="2874" max-vertical-offset="9600">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#4;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1396031146000" expanded="true" signature="18524:18571" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="18600:18658" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="18674:18735" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="18795:18805" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="19008:19070" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="21725:21772" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="21801:21859" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="21875:21936" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="21995:22005" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="22186:22248" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="24406:24453" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="24482:24540" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="24556:24617" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="24676:24686" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="24964:25026" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="26225:26272" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="26301:26337" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="26353:26414" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="26473:26483" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="26761:26823" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="27456:27503" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="27649:27710" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="27791:27801" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="28954:29001" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29030:29088" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29104:29165" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29224:29234" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29264:29310" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29555:29617" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29887:29933" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.vwf.config.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="34" selection-start="729" selection-end="729" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="345">
+          <folding>
+            <marker date="1396029339000" expanded="true" signature="689:717" placeholder="model:" />
+            <marker date="1396029339000" expanded="true" signature="717:1485" placeholder="view:" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.vwf.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="14" selection-start="1904" selection-end="1907" vertical-scroll-proportion="0.0" vertical-offset="507" max-vertical-offset="1395">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWindow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="336" column="12" selection-start="11827" selection-end="11830" vertical-scroll-proportion="0.0" vertical-offset="5040" max-vertical-offset="6240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.vwf.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="188" column="25" selection-start="7735" selection-end="7742" vertical-scroll-proportion="0.0" vertical-offset="2820" max-vertical-offset="3825">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#4;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1396031146000" expanded="true" signature="18524:18571" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="18600:18658" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="18674:18735" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="18795:18805" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="19008:19070" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="21725:21772" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="21801:21859" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="21875:21936" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="21995:22005" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="22186:22248" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="24406:24453" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="24482:24540" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="24556:24617" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="24676:24686" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="24964:25026" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="26225:26272" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="26301:26337" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="26353:26414" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="26473:26483" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="26761:26823" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="27456:27503" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="27649:27710" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="27791:27801" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="28954:29001" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29030:29088" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29104:29165" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29224:29234" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29264:29310" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29555:29617" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29887:29933" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.vwf.config.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="49" selection-start="744" selection-end="744" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="315">
+          <folding>
+            <marker date="1396029339000" expanded="true" signature="689:717" placeholder="model:" />
+            <marker date="1396029339000" expanded="true" signature="717:1485" placeholder="view:" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.vwf.yaml">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="86" column="19" selection-start="2930" selection-end="2933" vertical-scroll-proportion="0.0" vertical-offset="838" max-vertical-offset="1395">
           <folding />
         </state>
@@ -294,9 +465,7 @@
     <entry file="file://$PROJECT_DIR$/videoWindow.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="232" column="25" selection-start="7802" selection-end="7802" vertical-scroll-proportion="0.0" vertical-offset="3480" max-vertical-offset="6255">
-          <folding>
-            <marker date="1395930631000" expanded="true" signature="10366:10397" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -304,7 +473,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="144" column="75" selection-start="6291" selection-end="6294" vertical-scroll-proportion="0.0" vertical-offset="1978" max-vertical-offset="3825">
           <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#4;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1396031146000" expanded="true" signature="18524:18571" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="18600:18658" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="18674:18735" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="18795:18805" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="19008:19070" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="21725:21772" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="21801:21859" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="21875:21936" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="21995:22005" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="22186:22248" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="24406:24453" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="24482:24540" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="24556:24617" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="24676:24686" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="24964:25026" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="26225:26272" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="26301:26337" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="26353:26414" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="26473:26483" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="26761:26823" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="27456:27503" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="27649:27710" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="27791:27801" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="28954:29001" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29030:29088" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29104:29165" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29224:29234" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29264:29310" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29555:29617" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29887:29933" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -312,7 +516,10 @@
     <entry file="file://$PROJECT_DIR$/index.vwf.config.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="49" selection-start="744" selection-end="744" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="315">
-          <folding />
+          <folding>
+            <marker date="1396029339000" expanded="true" signature="689:717" placeholder="model:" />
+            <marker date="1396029339000" expanded="true" signature="717:1485" placeholder="view:" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -326,9 +533,7 @@
     <entry file="file://$PROJECT_DIR$/videoWindow.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="145" column="8" selection-start="4736" selection-end="4736" vertical-scroll-proportion="0.0" vertical-offset="2175" max-vertical-offset="6180">
-          <folding>
-            <marker date="1395930631000" expanded="true" signature="10366:10397" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -336,7 +541,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="95" column="26" selection-start="4239" selection-end="4244" vertical-scroll-proportion="0.0" vertical-offset="1248" max-vertical-offset="3825">
           <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#4;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1396031146000" expanded="true" signature="18524:18571" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="18600:18658" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="18674:18735" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="18795:18805" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="19008:19070" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="21725:21772" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="21801:21859" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="21875:21936" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="21995:22005" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="22186:22248" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="24406:24453" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="24482:24540" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="24556:24617" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="24676:24686" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="24964:25026" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="26225:26272" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="26301:26337" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="26353:26414" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="26473:26483" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="26761:26823" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="27456:27503" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="27649:27710" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="27791:27801" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="28954:29001" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29030:29088" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29104:29165" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29224:29234" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29264:29310" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29555:29617" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29887:29933" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -344,7 +584,10 @@
     <entry file="file://$PROJECT_DIR$/index.vwf.config.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="49" selection-start="744" selection-end="744" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="315">
-          <folding />
+          <folding>
+            <marker date="1396029339000" expanded="true" signature="689:717" placeholder="model:" />
+            <marker date="1396029339000" expanded="true" signature="717:1485" placeholder="view:" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -353,33 +596,9 @@
         <state line="13" column="3" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../vwf/public/chat/index.vwf.config.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="12" selection-start="708" selection-end="708" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../vwf/public/chat/index.vwf.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="25" selection-start="286" selection-end="286" vertical-scroll-proportion="0.2238806" vertical-offset="0" max-vertical-offset="8250" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../vwf/public/chat/index.vwf.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="25" selection-start="169" selection-end="169" vertical-scroll-proportion="0.08035714" vertical-offset="0" max-vertical-offset="5130" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../vwf/public/webrtc/index.vwf.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="0" selection-end="9050" vertical-scroll-proportion="0.40983605" vertical-offset="30" max-vertical-offset="3840" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/jquery-ui-1.10.3.custom.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="50" selection-start="144561" selection-end="144561" vertical-scroll-proportion="0.16071428" vertical-offset="0" max-vertical-offset="560">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
+        <state line="6" column="50" selection-start="144561" selection-end="144561" vertical-scroll-proportion="0.16071428" vertical-offset="0" max-vertical-offset="560" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/jquery-1.10.2.min.js">
@@ -396,30 +615,14 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="560" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../vwf/public/webrtc/index.vwf.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="89" selection-start="0" selection-end="2884" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1395" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../vwf/public/webrtc/videoWindow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="42" selection-start="237" selection-end="237" vertical-scroll-proportion="0.2058319" vertical-offset="0" max-vertical-offset="6210" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bootstrap/js/bootstrap.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="109" selection-start="220" selection-end="226" vertical-scroll-proportion="0.13464992" vertical-offset="0" max-vertical-offset="557">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
+        <state line="5" column="109" selection-start="220" selection-end="226" vertical-scroll-proportion="0.13464992" vertical-offset="0" max-vertical-offset="557" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="210" column="22" selection-start="3660" selection-end="3660" vertical-scroll-proportion="0.1491228" vertical-offset="3065" max-vertical-offset="6465">
-          <folding />
-        </state>
+        <state line="210" column="22" selection-start="3660" selection-end="3660" vertical-scroll-proportion="0.1491228" vertical-offset="3065" max-vertical-offset="6465" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jquery-ui-1.10.3.custom.min.css">
@@ -429,39 +632,164 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bootstrap/js/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="28" selection-start="2401" selection-end="2404" vertical-scroll-proportion="-7.1153846" vertical-offset="655" max-vertical-offset="30195">
+        <state line="73" column="28" selection-start="2401" selection-end="2404" vertical-scroll-proportion="-7.1153846" vertical-offset="655" max-vertical-offset="30195" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/videoWindow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="390" column="30" selection-start="12761" selection-end="12761" vertical-scroll-proportion="3.03154" vertical-offset="4186" max-vertical-offset="6165">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../vwf/public/chat/index.vwf.catalog.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="38" selection-start="51" selection-end="51" vertical-scroll-proportion="0.025167786" vertical-offset="0" max-vertical-offset="596" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../vwf/public/chat/index.vwf.config.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="12" selection-start="708" selection-end="708" vertical-scroll-proportion="0.39267015" vertical-offset="0" max-vertical-offset="573" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../vwf/public/webrtc/index.vwf.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="75" selection-start="3026" selection-end="3094" vertical-scroll-proportion="0.73770493" vertical-offset="720" max-vertical-offset="3840" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../vwf/public/webrtc/index.vwf.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="30" selection-start="1246" selection-end="1246" vertical-scroll-proportion="-0.1875" vertical-offset="570" max-vertical-offset="1395" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../vwf/public/chat/index.vwf.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="54" selection-start="1199" selection-end="1199" vertical-scroll-proportion="-0.025728988" vertical-offset="360" max-vertical-offset="5130" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../vwf/public/webrtc/videoWindow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="34" selection-start="3414" selection-end="3417" vertical-scroll-proportion="0.3195691" vertical-offset="1337" max-vertical-offset="6180" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../vwf/public/chat/index.vwf.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="162" column="11" selection-start="6690" selection-end="6697" vertical-scroll-proportion="4.5590997" vertical-offset="0" max-vertical-offset="8250" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../vwf/public/duck/index.vwf.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="49" selection-start="292" selection-end="292" vertical-scroll-proportion="0.10067114" vertical-offset="0" max-vertical-offset="1230" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/chat.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2430">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tictactoe/index.vwf.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="7" selection-start="127" selection-end="127" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="210">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chatuser.vwf.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="4" selection-end="850" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tictactoe/index.vwf.config.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="2" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tictactoe/index.vwf.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="200" selection-end="200" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model.vwf.config.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="880">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.vwf.config.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="49" selection-start="744" selection-end="744" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.vwf.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="188" column="25" selection-start="7735" selection-end="7742" vertical-scroll-proportion="-5.6" vertical-offset="2540" max-vertical-offset="3825">
+        <state line="10" column="99" selection-start="668" selection-end="668" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
           <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1396029339000" expanded="true" signature="689:717" placeholder="model:" />
+            <marker date="1396029339000" expanded="true" signature="717:1485" placeholder="view:" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.vwf.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="14" selection-start="1904" selection-end="1907" vertical-scroll-proportion="-11.076923" vertical-offset="507" max-vertical-offset="1395">
+        <state line="15" column="11" selection-start="742" selection-end="742" vertical-scroll-proportion="-8.653846" vertical-offset="0" max-vertical-offset="5970">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/videoWindow.js">
+    <entry file="file://$PROJECT_DIR$/model.vwf.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="336" column="12" selection-start="11827" selection-end="11830" vertical-scroll-proportion="1.53125" vertical-offset="3687" max-vertical-offset="6240">
+        <state line="13" column="36" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.vwf.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="633" column="29" selection-start="30807" selection-end="30807" vertical-scroll-proportion="0.76785713" vertical-offset="8850" max-vertical-offset="9765">
           <folding>
-            <marker date="1395930631000" expanded="true" signature="10366:10397" placeholder="..." />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#4;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#5;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1396031146000" expanded="true" signature="18524:18571" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="18600:18658" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="18674:18735" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="18795:18805" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="19008:19070" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="21725:21772" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="21801:21859" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="21875:21936" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="21995:22005" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="22186:22248" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="24406:24453" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="24482:24540" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="24556:24617" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="24676:24686" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="24964:25026" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="26225:26272" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="26301:26337" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="26353:26414" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="26473:26483" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="26761:26823" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="27456:27503" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="27649:27710" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="27791:27801" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="28954:29001" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29030:29088" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29104:29165" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29224:29234" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29264:29310" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29555:29617" placeholder="..." />
+            <marker date="1396031146000" expanded="true" signature="29887:29933" placeholder="..." />
           </folding>
         </state>
       </provider>

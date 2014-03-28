@@ -11,77 +11,383 @@
 # or implied. See the License for the specific language governing permissions and limitations under
 # the License.
 
---- 
+---
 extends: http://vwf.example.com/scene.vwf
 properties:
   rotationSpeed: 10
   backgroundColor: "rgba(0,0,0,0)"
   clientColors: [ [ 0, 0, 255 ], [ 255, 0, 0 ], [ 255, 255, 0 ], [ 0, 255, 0 ], [ 0, 255, 255 ], [ 255, 0, 255 ], [ 255, 153, 0 ], [ 153, 153, 153 ], [ 230, 230, 250 ], [ 0, 0, 0 ] ]
+  heartbeatInterval: 2500
+  heartbeatTimeout: 10.0
+  usersShareView: false
+  userObject:
+    extends: http://vwf.example.com/node3.vwf
+    properties:
+      translationSpeed: 100
+    children:
+      camera:
+        extends: http://vwf.example.com/camera.vwf
+        properties:
+          translation:
+            translation: [0, 0, 800]
+            far: 1000000
+            near: 1
+      avatar:
+        extends: http://vwf.example.com/node3.vwf
+        source: duck.dae
+        type: model/vnd.collada+xml
+        properties:
+          rotation: [0, 0, 1, 90]
+          scale: 0.4
+
 methods:
-  initializeCamera:
   createClient:
   removeClient:
   createVideo:
   removeVideo:
+  #chat code
+  createUser:
+  debug:
+  sendMessage:
+  userColorChange:
+  userSoundChange:
+  renameUser:
+  removeUser:
+  heartbeatUser:
+
+events:
+  userCreateFailed:
+  userCreated:
+  userMessage:
+  userMissing:
+  userDeleted:
+  userRenamed:
+  userColorChanged:
+
 children:
+  board:
+    extends: http://vwf.example.com/node3.vwf
+    source: board.dae
+  light:
+    extends: http://vwf.example.com/light.vwf
+    properties:
+      lightType: "directional"
+
   clients:
     extends: http://vwf.example.com/node.vwf
   sceneCenter:
     extends: http://vwf.example.com/node3.vwf
     properties:
       translation: [ 0, 0, 0 ]
+  users:
+    extends:  http://vwf.example.com/node.vwf
+    properties:
+      usersTime: undefined
+    methods:
+      testUsername:
+      tick:
+    scripts:
+    - |
+      this.badTimes = [];
+      this.testUsername = function( userName ) {
+        //Loop over children, test if userName is equal to children's
+        //names. Return true if there is no match(the name is good),
+        //return false if there is a match(the name is invalid).
+        var nameGood = true;
+        if ( userName.length == 0 ) {
+          nameGood = false;
+        }
+        this.children.forEach( function ( entry ) {
+          if ( entry.displayName == userName ) {
+            nameGood = false;
+          }
+        } );
+        return nameGood;
+      };
+      this.tick = function( ) {
+        var newTime = vwf.time();
+        var actuallyRemove = true;
+        var resetHeartbeats = false;
+        if ( this.usersTime == undefined ) {
+          this.usersTime = newTime
+        }
+        else if ( newTime < this.usersTime ) {
+          actuallyRemove = false;
+          resetHeartbeats = true;
+        }
+        else if ( newTime - this.usersTime > 1.0 ) {
+          if ( this.badTimes.indexOf( newTime ) == -1 ) {
+            this.badTimes.push( newTime );
+          }
+          return;
+        }
+        else if ( this.badTimes.indexOf( newTime ) > -1 ) {
+          return;
+        }
+        this.usersTime = newTime;
+        // When the model is tick-ed, first set up an array to hold
+        // children to be removed, and calculate the current heartbeat
+        // cutoff (now - heartbeatTimeout).
+        var myParent = this.parent;
+        var toRemove = [ ];
+        var curTimeCutoff = this.usersTime - this.parent.heartbeatTimeout;
+        // Loop over children, testing their latest heartbeat, add to
+        // the array of children to be removed if they fail the test.
+        this.children.forEach( function ( entry ) {
+          if ( resetHeartbeats == true ) {
+            entry.lastHeartbeat = myParent.users.usersTime;
+          }
+          else if ( ( entry.lastHeartbeat < curTimeCutoff ) && ( actuallyRemove == true ) ) {
+            toRemove.push( entry );
+          }
+        } );
+        // Loop over the children identified to be removed, trigger a
+        // userRemoved event to inform the various views, then delete
+        // the timed out User.
+        toRemove.forEach( function ( entry ) {
+          vwf.logger.warn("About to delete user with name " + entry.displayName + " and heartbeat time " + entry.lastHeartbeat + " when curTimeCutoff is " + curTimeCutoff );
+          myParent.userDeleted( entry.displayName );
+          vwf.deleteNode( entry.id );
+        } );
+      };
+
 scripts:
 - |
-    this.initialize = function(){
-      this.future( 0 ).initializeCamera();
-    }
+  this.createClient = function( moniker, loginName, mediaSharing ) {
 
-    this.initializeCamera = function() {
-      this.camera.navmode = "none";
+    var clr, colorList = this.clientColors;
+    clr = colorList.shift();
+    this.clientColors = colorList;
+    console.info( "createClient( "+moniker+", "+loginName+", "+mediaSharing+" )   clr = " + clr );
+    var clientDef = {
+      "extends": "http://vwf.example.com/client.vwf",
+      "properties": {
+        "displayName": loginName,
+        "sharing": mediaSharing,
+        "color": clr
+      },
     }
+    this.clients.children.create( "client"+moniker, clientDef, function( child ) {
 
-    this.createClient = function( moniker, loginName, mediaSharing ) {
-      
-      var clr, colorList = this.clientColors;
-      clr = colorList.shift();
+    } );
+  }
+  this.clientMoniker = function( name ) {
+      return name.substr( 6, name.length-1 );
+  }
+  this.findClient = function( moniker ) {
+    var client = undefined;
+    var len = this.clients.children.length;
+    for ( var i = 0; i < len && client === undefined; i++ ) {
+      if ( moniker == this.clientMoniker( this.clients.children[i].name ) ) {
+        client = this.clients.children[i];
+      }
+    }
+    return client;
+  }
+  this.removeClient = function( moniker ) {
+    var client = this.findClient( moniker );
+    if ( client ) {
+      var colorList = this.clientColors;
+      colorList.push( client.color );
       this.clientColors = colorList;
-      //console.log("\n\n HERE: " + mediaSharing.video + "\n\n");
-      console.info( "createClient( "+moniker+", "+loginName+", "+mediaSharing+" )   clr = " + clr );
 
-      var clientDef = { 
-        "extends": "http://vwf.example.com/client.vwf",
-        "properties": {
-          "displayName": loginName,
-          "sharing": mediaSharing,
-          "color": clr
-        },
+      if ( client.parent ) {
+        client.parent.children.delete( client );
       }
-      this.clients.children.create( "client"+moniker, clientDef, function( child ) {
-        
+    }
+  } //@ sourceURL = webrtc.vwf
+
+
+  //now its chat scripts
+
+
+  this.debug = function( viewHandle ) {
+    var me = this;
+    var childIndex = 1;
+    me.logger.warn( "Model level debug response, request from User whose view has moniker " + viewHandle + "." );
+    me.users.children.forEach( function ( entry ) {
+      me.logger.warn( "  (" + childIndex + ") Node Id: '" + entry.id + "'  User Name: '" + entry.displayName + "' View Handle: '" + entry.viewHandle + "' Last Heartbeat: '" + entry.lastHeartbeat + "'");
+      childIndex++;
+    } );
+  };
+
+
+  var entityMap = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': '&quot;',
+    "'": '&#39;',
+    "/": '&#x2F;'
+  };
+
+
+   this.cleanupString = function( inputString ) {
+    var currentString = inputString;
+    var findChunkStart = new RegExp( "(?=[Hh][Tt][Tt][Pp]://|[Hh][Tt][Tt][Pp][Ss]://|[Ww][Ww][Ww]\\.).*" );
+    var findChunkEnd = new RegExp("[^\\w\\.\\~\\-\\:\\/\\?\\#\\[\\]\\@\\!\\$\\&\\'\\(\\)\\*\\+\\,\\;\\=]");
+    var result = "";
+    var notFinished = true;
+    while ( notFinished ) {
+      var nextChunkIndex = currentString.search( findChunkStart )
+      if ( nextChunkIndex == -1 ) {
+        result = result + this.escapeHtml( currentString );
+        notFinished = false;
+      }
+      else if ( nextChunkIndex == 0 ) {
+        var newAhrefEnd = currentString.search( findChunkEnd );
+        if ( newAhrefEnd == -1 ) {
+          if ( ( currentString[ 0 ] == "w" ) || ( currentString[ 0 ] == "W" ) ) {
+            currentString = "http://" + currentString;
+          }
+          result = result + "<a href='" + currentString + "' target='_blank'>" + currentString + "</a>";
+          notFinished = false;
+        }
+        else
+        {
+          var newAhrefString = currentString.substr( 0, newAhrefEnd )
+          currentString = currentString.substr( newAhrefEnd );
+          if ( ( newAhrefString[ 0 ] == "w" ) || ( newAhrefString[ 0 ] == "W" ) ) {
+            newAhrefString = "http://" + newAhrefString;
+          }
+          result = result + "<a href='" + newAhrefString + "' target='_blank'>" + newAhrefString + "</a>";
+        }
+      }
+      else {
+        var newEscapedString = this.escapeHtml( currentString.substr( 0, nextChunkIndex ) );
+        currentString = currentString.substr( nextChunkIndex );
+        result = result + newEscapedString;
+      }
+    }
+    return result;
+  };
+
+  this.escapeHtml = function( string ) {
+    return String( string ).replace( /[&<>"'\/]/g, function ( s ) {
+      return entityMap[ s ];
+    } );
+  };
+
+  this.retrieveUser = function ( userName ) {
+    var user = undefined;
+    for ( var childIndex = 0; childIndex < this.users.children.length; childIndex++ ) {
+      if ( this.users.children[ childIndex ].displayName == userName ) {
+        user = this.users.children[ childIndex ];
+        break;
+      }
+    }
+    if ( user == undefined ) {
+      vwf.logger.warn( "RetrieveUser could not find user name " + userName );
+      this.userMissing( userName );
+    }
+    return user;
+  };
+
+
+  // The Send Message method.
+  // First attempt to retrieve the messaging user, if the user exists then
+  // for each user, test the message to be sent (test if the users name is in the
+  // message and posts an event to play an alert sound for the user if it is).
+  // Then actually post the userMessage event to send the message to the various
+  // views.
+  this.sendMessage = function( message, userName ) {
+    var user = this.retrieveUser( userName );
+    if ( user != undefined ) {
+      this.users.children.forEach( function ( entry ) {
+        entry.testMessageForName( message );
       } );
-    } 
-    this.clientMoniker = function( name ) {
-        return name.substr( 6, name.length-1 );
-    }    
-    this.findClient = function( moniker ) {
-      var client = undefined;
-      var len = this.clients.children.length;
-      for ( var i = 0; i < len && client === undefined; i++ ) {
-        if ( moniker == this.clientMoniker( this.clients.children[i].name ) ) {
-          client = this.clients.children[i];
-        }
-      }
-      return client;
-    } 
-    this.removeClient = function( moniker ) {
-      var client = this.findClient( moniker );
-      if ( client ) { 
-        var colorList = this.clientColors;
-        colorList.push( client.color );
-        this.clientColors = colorList;
+      this.userMessage( user.displayName, user.displayColor, this.cleanupString( message ) );
+    }
+    else {
+      vwf.logger.warn("Send message failed to retrieve user: " + userName );
+    }
+  };
 
-        if ( client.parent ) {
-          client.parent.children.delete( client );
-        }
+  this.userColorChange = function( color, userName ) {
+    var user = this.retrieveUser( userName );
+    if ( user != undefined ) {
+      user.displayColor = color;
+      this.userColorChanged( userName, color );
+    }
+    else {
+      vwf.logger.warn( "Color change failed to retrieve user: " + userName );
+    }
+  };
+
+  this.userSoundChange = function( sound, userName ) {
+    var user = this.retrieveUser( userName );
+    if ( user != undefined ) {
+      user.alertSound = sound;
+    }
+    else {
+      vwf.logger.warn( "Sound Change failed to retrieve user: " + userName );
+    }
+  };
+
+  this.renameUser = function( newName, oldName ) {
+    var user = this.retrieveUser( oldName );
+    if ( user != undefined ) {
+      if ( this.users.testUsername( newName ) ) {
+        user.displayName = newName;
+        this.userRenamed( newName, oldName );
       }
-    } //@ sourceURL = webrtc.vwf
+    }
+    else {
+      vwf.logger.warn( "Rename user failed to retrieve user: " + userName );
+    }
+  };
+
+  this.removeUser = function( userName ) {
+    var user = this.retrieveUser( userName );
+    if ( user != undefined ) {
+      this.userDeleted( user.displayName );
+      vwf.deleteNode( user.id );
+    }
+    else {
+      vwf.logger.warn( "Remove user failed to retrieve user: " + userName );
+    }
+  };
+
+  this.heartbeatUser = function( userName ) {
+    var user = this.retrieveUser( userName );
+    if ( user != undefined ) {
+      user.lastHeartbeat = this.users.usersTime;
+    }
+    else {
+      vwf.logger.warn( "Heartbeat user failed to retrieve user: " + userName );
+    }
+  };
+
+  this.createUser = function( userName, userColor, userSound, viewHandle ) {
+    userName = userName.replace( / /g, "_" );
+    userName = userName.replace( /([^0-9A-Za-z\-\_])/g, "" );
+    //First, test if the userName is valid.
+    if ( this.users.testUsername( userName ) == false ) {
+      // Raise event that the username wasn't usable.
+      this.userCreateFailed( userName );
+    }
+    else {
+      //If the username is valid, create the new user as a child of users.
+      //Provide a callback function that when the user creation is finished,
+      //sends an appropriate userCreated event.
+      var newTime = this.users.usersTime;
+      var userDef = {
+        "extends": "chatuser.vwf",
+        "properties": {
+          "displayName": userName,
+          "viewHandle": viewHandle,
+          "displayColor": userColor,
+          "alertSound": userSound,
+          "lastHeartbeat": newTime
+        },
+        "children": { }
+      };
+      this.users.children.create( userName, userDef, function( node ) {
+        var userList = [ ];
+        node.parent.children.forEach( function( entry ) {
+          userList.push( [ entry.id, entry.displayName, entry.displayColor, entry.viewHandle ] );
+        } );
+        this.parent.userCreated( node.id, node.displayName, node.displayColor, userList, node.parent.parent.heartbeatInterval, node.viewHandle );
+      } );
+    }
+  } //@source=index.vwf

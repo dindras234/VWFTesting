@@ -1,6 +1,4 @@
-# Simplest possible VWF applcation.
-# See https://virtual.wf/getting_started.html for more information.
---- 
+---
 extends: http://vwf.example.com/scene.vwf
 properties:
   usersShareView: false
@@ -23,7 +21,6 @@ properties:
         properties:
           rotation: [0, 0, 1, 90]
           scale: 0.4
-
 children:
   board:
     extends: http://vwf.example.com/node3.vwf
@@ -31,4 +28,4 @@ children:
   light:
     extends: http://vwf.example.com/light.vwf
     properties:
-      lightType: "point"
+      lightType: "directional"
