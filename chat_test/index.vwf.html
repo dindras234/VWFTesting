@@ -181,7 +181,7 @@
 </div>
 <script type="text/javascript">
 var appRoot = vwf_view.kernel.find( "", "/" )[0];
-
+$('#vwf-root').hide();
 //$( window ).unload( function() {
 //	vwf_view.kernel.callMethod( appRoot, "removeClient", [ vwf_view.kernel.moniker() ] )
 //} );
@@ -639,6 +639,7 @@ $(document).keypress(function(e){
     if(e.which == "i".charCodeAt(0))
     {
         $('#ChatDiv').toggle();
+        $('#vwf-root').toggle();
     }
 });
 </script>

@@ -23,7 +23,7 @@ properties:
   userObject:
     extends: http://vwf.example.com/node3.vwf
     properties:
-      translationSpeed: 100
+      translationSpeed: 75
     children:
       camera:
         extends: http://vwf.example.com/camera.vwf
@@ -34,11 +34,11 @@ properties:
             near: 1
       avatar:
         extends: http://vwf.example.com/node3.vwf
-        source: duck.dae
+        source: Soldier.dae
         type: model/vnd.collada+xml
         properties:
-          rotation: [0, 0, 1, 90]
-          scale: 0.4
+          scale: 0.003
+          translation: [0,0,-1.8]
 
 methods:
   createClient:
@@ -71,8 +71,10 @@ children:
   light:
     extends: http://vwf.example.com/light.vwf
     properties:
-      lightType: "directional"
-
+      lightType: "point"
+      distance: 4000
+      translation: [ 400, -400, 2000 ]
+      intensity: 3
   clients:
     extends: http://vwf.example.com/node.vwf
   sceneCenter:
