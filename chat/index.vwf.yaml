@@ -10,81 +10,68 @@
 # is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
 # or implied. See the License for the specific language governing permissions and limitations under
 # the License.
-
----
-extends: http://vwf.example.com/scene.vwf
+--- 
 properties:
-  rotationSpeed: 10
-  backgroundColor: "rgba(0,0,0,0)"
-  clientColors: [ [ 0, 0, 255 ], [ 255, 0, 0 ], [ 255, 255, 0 ], [ 0, 255, 0 ], [ 0, 255, 255 ], [ 255, 0, 255 ], [ 255, 153, 0 ], [ 153, 153, 153 ], [ 230, 230, 250 ], [ 0, 0, 0 ] ]
+# Heartbeats are used to keep track of when connections to users are lost.
+# The heartbeat interval represents how often the view will send a heartbeat to the model
+# and it is in milliseconds.
   heartbeatInterval: 2500
+# The heartbeat timeout is how recently the model must have heard from the view in order
+# to not consider the view disconnected and remove the correlated user. It is measured
+# in seconds.
   heartbeatTimeout: 10.0
-  usersShareView: false
-  userObject:
-    extends: http://vwf.example.com/node3.vwf
-    properties:
-      translationSpeed: 75
-    children:
-      camera:
-        extends: http://vwf.example.com/camera.vwf
-        properties:
-          translation:
-            translation: [0, 0, 800]
-            far: 1000000
-            near: 1
-      avatar:
-        extends: http://vwf.example.com/node3.vwf
-        source: duck.dae
-        type: model/vnd.collada+xml
-        properties:
-          scale: 0.003
-          translation: [0,0,-1.8]
-        children:
-          material:
-            extends: http://vwf.example.com/material.vwf
-
 methods:
-  createClient:
-  removeClient:
-  createVideo:
-  removeVideo:
-  #chat code
+# The createUser method is used to create users when loggin in.
   createUser:
+# The debug method is used to provide model side debug tally of
+# users for debugging connection issues.
   debug:
+# The sendMessage method is used for users to send messages.
+# It takes three arguments. The message, the user's expected node ID
+# and the user's expected view handle.
   sendMessage:
+# The userColorChange method takes three arguments.
+# The color to change to, the users expected node ID and the user's
+# expected view handle.
   userColorChange:
+# The userSoundChange method takes three arguments.
+# The sound to change to, the user's expected node ID and the user's
+# expected view handle.
   userSoundChange:
+# The renameUser method takes three arguments.
+# The name to change to, the user's expected node ID and the user's
+# expected view handle.
   renameUser:
+# The removeUser method takes two arguments.
+# The user's expected node ID and view handle.
   removeUser:
+# The heartbeatUser method takes two arguments.
+# The user's expected node ID and view handle.
   heartbeatUser:
-  changeModelColor:
-
 events:
+# The userCreateFailed event is raised when user creation fails.
+# Currently only uniqueness of name is tested, so that is the only
+# possible failure cause at present. The return value is the userName
+# that failed creation.
   userCreateFailed:
+# The userCreated event fires when a new user is created.
+# The arguments are the new users nodeId, the display name, the display color, an array of two 
+# member arrays with display name/display color pairs of currently existing users in order to
+# populate the current user list, and finally the heartbeatInterval.
   userCreated:
+# The userMessage event is posted when a user sends a message to the chat.
   userMessage:
+# The userMissing event is posted whenever a call is made for a user that is
+# not found.
   userMissing:
   userDeleted:
   userRenamed:
   userColorChanged:
-
 children:
-  board:
-    extends: http://vwf.example.com/node3.vwf
-    source: board.dae
-  light:
-    extends: http://vwf.example.com/light.vwf
-    properties:
-      lightType: "point"
-      distance: 4000
-      translation: [ 400, -400, 2000 ]
-      intensity: 3
-  clients:
-    extends: http://vwf.example.com/node.vwf
-  sceneCenter:
-    extends: http://vwf.example.com/node3.vwf
-    properties:
-      translation: [ 0, 0, 0 ]
+# The users child is used to contain the users that are currently connected.
+# It provides a tick function that deals with removing users whose heartbeat
+# has timed out, and it provides a testUsername method that tests if a username
+# is already in use.
   users:
     extends:  http://vwf.example.com/node.vwf
     properties:
@@ -156,63 +143,8 @@ children:
           vwf.deleteNode( entry.id );
         } );
       };
-
 scripts:
 - |
-  //change model color
-  this.changeModelColor = function(modelColor){
-    this.userObject.children.avatar.children.material.color = modelColor;
-    console.log("\n\nCHANGING\n\n");
-  }
-
-  this.createClient = function( moniker, loginName, mediaSharing ) {
-
-    var clr, colorList = this.clientColors;
-    clr = colorList.shift();
-    this.clientColors = colorList;
-    console.info( "createClient( "+moniker+", "+loginName+", "+mediaSharing+" )   clr = " + clr );
-    var clientDef = {
-      "extends": "http://vwf.example.com/client.vwf",
-      "properties": {
-        "displayName": loginName,
-        "sharing": mediaSharing,
-        "color": clr
-      },
-    }
-    this.clients.children.create( "client"+moniker, clientDef, function( child ) {
-
-    } );
-  }
-  this.clientMoniker = function( name ) {
-      return name.substr( 6, name.length-1 );
-  }
-  this.findClient = function( moniker ) {
-    var client = undefined;
-    var len = this.clients.children.length;
-    for ( var i = 0; i < len && client === undefined; i++ ) {
-      if ( moniker == this.clientMoniker( this.clients.children[i].name ) ) {
-        client = this.clients.children[i];
-      }
-    }
-    return client;
-  }
-  this.removeClient = function( moniker ) {
-    var client = this.findClient( moniker );
-    if ( client ) {
-      var colorList = this.clientColors;
-      colorList.push( client.color );
-      this.clientColors = colorList;
-
-      if ( client.parent ) {
-        client.parent.children.delete( client );
-      }
-    }
-  } //@ sourceURL = webrtc.vwf
-
-
-  //now its chat scripts
-
-
   this.debug = function( viewHandle ) {
     var me = this;
     var childIndex = 1;
@@ -222,8 +154,8 @@ scripts:
       childIndex++;
     } );
   };
-
-
+  
+  
   var entityMap = {
     "&": "&amp;",
     "<": "&lt;",
@@ -233,7 +165,7 @@ scripts:
     "/": '&#x2F;'
   };
 
-
+  
    this.cleanupString = function( inputString ) {
     var currentString = inputString;
     var findChunkStart = new RegExp( "(?=[Hh][Tt][Tt][Pp]://|[Hh][Tt][Tt][Pp][Ss]://|[Ww][Ww][Ww]\\.).*" );
@@ -273,13 +205,13 @@ scripts:
     }
     return result;
   };
-
+  
   this.escapeHtml = function( string ) {
     return String( string ).replace( /[&<>"'\/]/g, function ( s ) {
       return entityMap[ s ];
     } );
   };
-
+  
   this.retrieveUser = function ( userName ) {
     var user = undefined;
     for ( var childIndex = 0; childIndex < this.users.children.length; childIndex++ ) {
@@ -294,9 +226,9 @@ scripts:
     }
     return user;
   };
-
-
-  // The Send Message method.
+  
+  
+  // The Send Message method. 
   // First attempt to retrieve the messaging user, if the user exists then
   // for each user, test the message to be sent (test if the users name is in the
   // message and posts an event to play an alert sound for the user if it is).
@@ -325,7 +257,7 @@ scripts:
       vwf.logger.warn( "Color change failed to retrieve user: " + userName );
     }
   };
-
+  
   this.userSoundChange = function( sound, userName ) {
     var user = this.retrieveUser( userName );
     if ( user != undefined ) {
@@ -335,7 +267,7 @@ scripts:
       vwf.logger.warn( "Sound Change failed to retrieve user: " + userName );
     }
   };
-
+  
   this.renameUser = function( newName, oldName ) {
     var user = this.retrieveUser( oldName );
     if ( user != undefined ) {
@@ -348,7 +280,7 @@ scripts:
       vwf.logger.warn( "Rename user failed to retrieve user: " + userName );
     }
   };
-
+  
   this.removeUser = function( userName ) {
     var user = this.retrieveUser( userName );
     if ( user != undefined ) {
@@ -369,7 +301,7 @@ scripts:
       vwf.logger.warn( "Heartbeat user failed to retrieve user: " + userName );
     }
   };
-
+  
   this.createUser = function( userName, userColor, userSound, viewHandle ) {
     userName = userName.replace( / /g, "_" );
     userName = userName.replace( /([^0-9A-Za-z\-\_])/g, "" );
@@ -383,7 +315,7 @@ scripts:
       //Provide a callback function that when the user creation is finished,
       //sends an appropriate userCreated event.
       var newTime = this.users.usersTime;
-      var userDef = {
+      var userDef = { 
         "extends": "chatuser.vwf",
         "properties": {
           "displayName": userName,
@@ -392,7 +324,7 @@ scripts:
           "alertSound": userSound,
           "lastHeartbeat": newTime
         },
-        "children": { }
+        "children": { } 
       };
       this.users.children.create( userName, userDef, function( node ) {
         var userList = [ ];
@@ -402,4 +334,4 @@ scripts:
         this.parent.userCreated( node.id, node.displayName, node.displayColor, userList, node.parent.parent.heartbeatInterval, node.viewHandle );
       } );
     }
-  } //@source=index.vwf
+  } //@ sourceURL=index.vwf

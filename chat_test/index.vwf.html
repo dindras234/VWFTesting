@@ -201,25 +201,26 @@ vwf_view.calledMethod = function( nodeID, methodName, methodParameters, methodVa
                 var parms = methodParameters[0];
                 // defined in videoWindow.js
                 //newWindow( parms.ID, parms.name, "video", parms.url, parms.color, parms.muted );
-                //var mutedAttr = parms.muted ? "muted " : "";
+                var mutedAttr = parms.muted ? "muted " : "";
                 $('#audioWrapper').append(
                         //"<video id='" + videoId + "' width='320' height='240' loop='loop' autoplay "+mutedAttr+"style='position: absolute; left: 0; top: 0; z-index: 2;width:100%;height:100%;' />" +
-                        "<audio id='audio-" + parms.ID + "' loop='loop' autoplay/>"//+mutedAttr+"/>"
+                        "<audio id='audio-" + parms.ID + "' loop='loop' autoplay/> " +mutedAttr+"/>"
                 );
                 var videoE = $( '#audio-'+ parms.ID )[0];
                 if ( videoE ) {
                     if ( parms.url ) {
                         videoE.src = parms.url;
                     }
-                    /*  if ( parms.muted ) {
+                      if ( parms.muted ) {
                      videoE.muted = true;  // firefox isn't mapping the muted property correctly
-                     }*/
+                     }
                 }
 
             }
             break;
         case "removeClientVideo":
         case "removeVideo":
+            var parms = methodParameters[0];
             $('#audio-'+parms.ID)[0].remove();
             // defined in videoWindow.js
             //removeWindow( methodParameters[0] );
@@ -290,7 +291,7 @@ $( '#playerNameInput' ).keyup( function( e ) {
             };
         var parms = [ vwf_view.kernel.moniker(), sanitizedUsername, capture ];
         vwf_view.kernel.callMethod( appRoot, "createClient", parms );
-
+        console.log("\n\n Client Created \n\n");
         }
 });
 
